@@ -23,6 +23,7 @@ function SaveContact() {
 			exit(header('location: ../index.php'));
 		}
 	}
+	mysqli_close($con);	
 }
 
 ?>

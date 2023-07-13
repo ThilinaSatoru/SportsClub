@@ -10,14 +10,14 @@ $e_type = "";
 $e_description = "";
 
 if (isset($_POST['reg_event'])) {
-	$d_fname = $_POST['fname'];
-    $d_lname = $_POST['lname'];
+	$e_fname = $_POST['fname'];
+    $e_lname = $_POST['lname'];
     $e_email = $_POST['email'];
     $e_title = $_POST['title'];
     $e_type = $_POST['type'];
     $e_description = $_POST['description'];
 	
-    donate($d_fname, $d_lname, $d_email, $e_title, $e_type, $e_description);
+    donate($e_fname, $e_lname, $e_email, $e_title, $e_type, $e_description);
 }
 
 function donate($fname, $lname, $email, $title, $type, $description) {
@@ -34,7 +34,7 @@ function donate($fname, $lname, $email, $title, $type, $description) {
 			exit(header('location: ../Events.php'));
 		}
 	}
-	
+	mysqli_close($con);	
 }
 
 

@@ -35,7 +35,7 @@ function donate($fname, $lname, $phone, $email, $fund, $message) {
 			exit(header('location: ../donationForm.php'));
 		}
 	}
-	
+	mysqli_close($con);	
 }
 
 

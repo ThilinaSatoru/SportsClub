@@ -13,24 +13,22 @@ function login() {
 
     // $password = md5($pass);
 
-		$query = "SELECT * FROM user WHERE username='$user' AND password='$pass' LIMIT 1";
-		$results = mysqli_query($con, $query);
+	$query = "SELECT * FROM user WHERE username='$user' AND password='$pass' LIMIT 1";
+	$results = mysqli_query($con, $query);
 
-		if (mysqli_num_rows($results) == 1) { 
-            // user found
-			$logged_in_user = mysqli_fetch_assoc($results);
-			// $_SESSION['user'] = $logged_in_user;
-			// $_SESSION['success']  = "User logged in";
-            header("location: ../index.php");
-            
-		} else {
-			array_push($errors, "Wrong username/password combination");
-            header("location: ../login.php");
-		}
+	if (mysqli_num_rows($results) == 1) { 
+		// user found
+		$logged_in_user = mysqli_fetch_assoc($results);
+		// $_SESSION['user'] = $logged_in_user;
+		// $_SESSION['success']  = "User logged in";
+		header("location: ../index.php");
+		
+	} else {
+		array_push($errors, "Wrong username/password combination");
+		header("location: ../login.php");
+	}
+	mysqli_close($con);	
 }
-
-
-
 
 
 if (isset($_POST['register'])) {
@@ -79,9 +77,7 @@ function register($user, $pass, $email) {
 			exit(header('location: ../login.php'));
 		}
 	}
-	
+	mysqli_close($con);	
 }
-
-
 
 ?>

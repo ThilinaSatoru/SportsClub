@@ -93,63 +93,72 @@
 
     <!--end items-->
 
+
+
+
+    <div id="body_header">
+        <h1>Pending Requests</h1>
+        <p><a href="#request_form">Make your Request</a></p>
+        <div class="card_row">
+            <?php include("templates/card.php") ?>
+        </div>
+    </div>
+
+
+
+
     <!--request form-->
 
-    <div id="container">
-        <!--This is a division tag for body container-->
+    <div id="request_form">
         <div id="body_header">
-            <!--This is a division tag for body header-->
             <h1>Sport Items Request Form</h1>
             <p>Make your Request more easier</p>
-
         </div>
-        <form action="index.html" method="post">
+        <?php include("PHP/functions.php") ?>
+        <form action="PHP/items.php" method="post">
             <fieldset>
                 <legend><span class="number">1</span>Your basic details</legend>
                 <label for="name">Name*:</label>
-                <input type="text" id="name" name="user_name" placeholder="Full Name" required pattern="[a-zA-Z0-9]+">
+                <input type="text" id="name" name="name" placeholder="Full Name" pattern="[a-zA-Z0-9]+">
 
-                <label for="mail">Email*:</label>
-                <input type="email" id="mail" name="user_email" placeholder="abc@xyz.com" required>
+                <label for="email">Email*:</label>
+                <input type="email" id="mail" name="email" placeholder="abc@xyz.com">
 
-                <label for="tel">University:</label>
-                <input type="tel" id="tel" placeholder="NIBM" name="user_num">
+                <label for="university">University:</label>
+                <input type="text" id="university" placeholder="NIBM" name="university">
 
-                <label for="skype_name">Batch:</label>
-                <input type="text" id="skype_name" name="skype_name" placeholder="GAHDSE211F" pattern="[a-zA-Z0-9]+">
-
-
+                <label for="batch">Batch:</label>
+                <input type="text" id="batch" name="batch" placeholder="GAHDSE211F" pattern="[a-zA-Z0-9]+">
             </fieldset>
 
             <fieldset>
                 <legend><span class="number">2</span>Requst Items Details</legend>
-                <label for="appointment_for">Request for*:</label>
+                <label for="equipment">Request for*:</label>
 
-                <select id="mySelect" onChange="check(this);">
+                <select id="equipment" name="equipment">
                     <option>Choose Your Option</option>
-                    <option>Bat</option>
-                    <option>volleyball</option>
-                    <option>Football</option>
-                    <option>Chess</option>
-                    <option>Other</option>
+                    <?php foreach (getEquipments() as $option) { ?>
+                    <option><?php echo $option['name']; ?> </option>
+                    <?php }?>
                 </select>
+
                 <div id="other-div" style="display:none;">
                     <label>Enter your Option
                         <input id="other-input"></input>
                     </label>
                 </div>
-                <label for="appointment_description">Request Description:</label>
-                <textarea id="appointment_description" name="appointment_description"
-                    placeholder="Request Your Needs of Sport."></textarea>
+
+                <label for="description">Request Description:</label>
+                <textarea id="description" name="description" placeholder="Request Your Needs of Sport."></textarea>
                 <label for="date">Date*:</label>
-                <input type="date" name="date" value="" required></input>
+                <input type="date" name="date"></input>
                 <br>
                 <label for="time">Time*:</label>
-                <input type="time" name="time" value="" required></input>
+                <input type="time" name="time"></input>
                 <br>
 
             </fieldset>
-            <button type="submit">Request For Items</button>
+            <button type="submit" name="request">Request For Items</button>
         </form>
     </div>
 
@@ -218,6 +227,7 @@
     <!--Copyfooter end-->
 
     <script src="js/sportitem.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
 </body>
 

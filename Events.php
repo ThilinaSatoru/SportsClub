@@ -80,7 +80,7 @@
                 <div class="row">
                     <!--       Business email -->
                     <div class="col">
-                        <label for="">
+                        <label for="email">
                             Email
                         </label>
                         <input type="email" name="email" placeholder="Enter your email">
