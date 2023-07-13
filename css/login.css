@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #4e9eff;
+  transition: 0.5s;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+ul {
+  padding: 50px 0;
+}
+
+ul li {
+  position: relative;
+  list-style-type: none;
+  width: 6px;
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+ul li::after {
+  background: white;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+ul li div {
+  position: relative;
+  width: 400px;
+  padding: 15px;
+  border-radius: 5px;
+  bottom: 0;
+  background: rgba(42, 50, 113, 0.28);
+}
+
+ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+ul li:nth-child(even) div {
+  left: -445px;
+}
+
+time {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  ul li div {
+    width: 250px;
+  }
+  ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+header .navigation {
+  position: relative;
+}
+
+header .navigation a {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+header .navigation a:hover {
+  color: rgb(7, 3, 66);
+}
+
+body.active {
+  background: #f43648;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 20px;
+}
+.blueBg {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.15);
+}
+
+.blueBg .box {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.blueBg .box h2 {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.blueBg .box button {
+  cursor: pointer;
+  padding: 10px 20px;
+  background: #fff;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+}
+.formBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.25);
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.formBx.active {
+  left: 50%;
+}
+
+.formBx .form {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+  transition: 0.5s;
+}
+
+.formBx .signinForm {
+  transition-delay: 0.25s;
+}
+
+.formBx.active .signinForm {
+  left: -100%;
+  transition-delay: 0s;
+}
+
+.formBx .signupForm {
+  left: 100%;
+  transition-delay: 0s;
+}
+
+.formBx.active .signupForm {
+  left: 0;
+  transition-delay: 0.25s;
+}
+.formBx .form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formBx .form form h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.formBx .form form input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  border: 1px soild #333;
+}
+
+.formBx .form form input[type="submit"] {
+  background: #4e9eff;
+  border: none;
+  color: #fff;
+  max-width: 100px;
+  cursor: pointer;
+}
+
+.formBx.active .signupForm input[type="submit"] {
+  background: #f43648;
+}
+
+.formBx .form form .forgot {
+  color: #333;
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 400px;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .blueBg {
+    top: 0;
+    height: 100%;
+  }
+
+  .formBx {
+    width: 100%;
+    height: 500px;
+    top: 0;
+    box-shadow: none;
+  }
+
+  .blueBg .box {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+  }
+
+  .box.signin {
+    top: 0;
+  }
+  .formBx.active {
+    left: 0;
+    top: 150px;
+  }
+}
+
+/*header start*/
+
+header {
+  z-index: 999;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.1);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease;
+}
+/*scroll header*/
+header.sticky {
+  background: #3a6cf4;
+  padding: 10px 200px;
+}
+
+header .brand {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header .navigation {
+  position: relative;
+}
+
+header .navigation a {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+header .navigation a:hover {
+  color: rgb(7, 3, 66);
+}
+
+body {
+  min-height: 110vh;
+}
+/*header end*/
