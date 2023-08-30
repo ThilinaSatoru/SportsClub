@@ -66,14 +66,14 @@
                         <label for="">
                             First name
                         </label>
-                        <input type="text" name="fname" placeholder="Enter your first name">
+                        <input type="text" name="fname" placeholder="Enter your first name" required>
                     </div>
                     <!--       Last name -->
                     <div class="col">
                         <label for="">
                             Last name
                         </label>
-                        <input type="text" name="lname" placeholder="Enter your last name">
+                        <input type="text" name="lname" placeholder="Enter your last name" required>
                     </div>
                 </div>
                 <!--     email & job -->
@@ -90,13 +90,13 @@
                         <label for="">
                             Event Title
                         </label>
-                        <input type="text" name="title" placeholder="What is your Event?">
+                        <input type="text" name="title" placeholder="What is your Event?" required>
                     </div>
                     <div class="col">
                         <label for="">
                             Event Type
                         </label>
-                        <input type="text" name="type" placeholder="Event type">
+                        <input type="text" name="type" placeholder="Event type" required>
                     </div>
                 </div>
 

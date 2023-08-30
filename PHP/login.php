@@ -21,9 +21,11 @@ function login() {
 		$logged_in_user = mysqli_fetch_assoc($results);
 		// $_SESSION['user'] = $logged_in_user;
 		// $_SESSION['success']  = "User logged in";
+		echo "<script> alert('Welcome " . $logged_in_user . "') </script>";
 		header("location: ../index.php");
 		
 	} else {
+		echo "<script> alert('Wrong username/password combination.') </script>";
 		array_push($errors, "Wrong username/password combination");
 		header("location: ../login.php");
 	}
@@ -49,12 +51,12 @@ if (isset($_POST['register'])) {
 
 
 			if (mysqli_num_rows($res_u) > 0) {
-				$name_error = "User ID already taken"; 	
-				// echo '<script>alert("User ID already taken")</script>';
+				$name_error = "User ID already taken";
+				echo "<script> alert('" . $name_error . "') </script>";
 			}
 			else if(mysqli_num_rows($res_e) > 0) {
-				$email_error = "Account exists with this Email"; 	
-				// echo '<script>alert("Account exists with this Email")</script>';	
+				$email_error = "Account exists with this Email";
+				echo "<script> alert('" . $name_error . "') </script>";
 			}
 			else{
 				register($username, $password1, $email);
@@ -74,6 +76,7 @@ function register($user, $pass, $email) {
 			die("Redirect failed. Please click on this link: <a href=...>");
 		}
 		else{
+			echo "<script> alert('Register Successfull.') </script>";
 			exit(header('location: ../login.php'));
 		}
 	}

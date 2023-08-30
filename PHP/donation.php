@@ -32,8 +32,11 @@ function donate($fname, $lname, $phone, $email, $fund, $message) {
 			die("Redirect failed. Please click on this link: <a href=...>");
 		}
 		else{
+			echo "<script> alert('Donation Successfull.') </script>";
 			exit(header('location: ../donationForm.php'));
 		}
+	} else {
+		echo "<script> alert('Donation Failed.') </script>";
 	}
 	mysqli_close($con);	
 }

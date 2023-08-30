@@ -35,14 +35,14 @@
         <div id="container">
 
             <span class="input">
-                <input type="text" class="input__field" id="input-1" name="fname" />
+                <input type="text" class="input__field" id="input-1" name="fname" required />
                 <label for="input-1" class="input__label">
                     <span class="input__label-content">First Name</span>
                 </label>
             </span>
 
             <span class="input">
-                <input type="text" class="input__field" id="input-2" name="lname" />
+                <input type="text" class="input__field" id="input-2" name="lname" required />
                 <label for="input-2" class="input__label">
                     <span class="input__label-content">Last Name</span>
                 </label>
@@ -63,7 +63,7 @@
             </span>
 
             <span class="input">
-                <input type="number" class="input__field" id="input-5" name="fund" />
+                <input type="number" class="input__field" id="input-5" name="fund" required />
                 <label for="input-5" class="input__label">
                     <span class="input__label-content">Fund</span>
                 </label>
@@ -134,8 +134,7 @@
                     <input class="card-submit" type="submit" name="donate" />
                 </div> -->
 
-                <img class="card-image" src="https://pngimg.com/uploads/credit_card/credit_card_PNG99.png"
-                    alt="Card image" />
+                <img class="card-image" src="https://pngimg.com/uploads/credit_card/credit_card_PNG99.png" alt="Card image" />
                 <div class="card-image-shadow"></div>
 
             </div>

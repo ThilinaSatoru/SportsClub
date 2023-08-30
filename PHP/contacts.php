@@ -20,8 +20,11 @@ function SaveContact() {
 			die("Redirect failed. Please click on this link: <a href=...>");
 		}
 		else{
+			echo "<script> alert('Message Sent.') </script>";
 			exit(header('location: ../index.php'));
 		}
+	} else {
+		echo "<script> alert('Message Failed .') </script>";
 	}
 	mysqli_close($con);	
 }

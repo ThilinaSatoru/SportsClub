@@ -38,7 +38,9 @@ function request($name, $email, $university, $batch, $equipment, $description, $
 
             if(!mysqli_query($con, $query)) {
                 echo("Error description: " . $con -> error);
+                echo "<script> alert('Register Failed.') </script>";
             } else {
+                echo "<script> alert('Request Successfull.') </script>";
                 exit(header('location: ../SportItems.php'));
             }
         }

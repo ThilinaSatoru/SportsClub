@@ -28,9 +28,11 @@ function donate($fname, $lname, $email, $title, $type, $description) {
 	
 	if($query){
 		if (headers_sent()) {
+			echo "<script> alert('Something Went Wrong!') </script>";
 			die("Redirect failed. Please click on this link: <a href=...>");
 		}
 		else{
+			echo "<script> alert('Event Added Successfully.') </script>";
 			exit(header('location: ../Events.php'));
 		}
 	}
