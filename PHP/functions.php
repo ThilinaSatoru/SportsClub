@@ -1,5 +1,5 @@
 <?php 
-include("connection.php");
+require_once("connection.php");
 
 
 function getEquipments() {
@@ -7,11 +7,13 @@ function getEquipments() {
 
     $query ="SELECT name FROM equipment";
     $result = $con->query($query);
-    if($result->num_rows> 0){
+    if ($result->num_rows > 0) {
         $options = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        mysqli_close($con);
         return $options;
+    } else {
+        return null;
     }
-    mysqli_close($con);	
 }
 
 

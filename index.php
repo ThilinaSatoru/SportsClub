@@ -20,9 +20,7 @@
   </div>
 
   <!--scrolltotop end-->
-
   <?php include("_header.php"); ?>
-
   <!--home start-->
 
   <section class="home" id="home">
@@ -87,7 +85,6 @@
     </div>
   </section>
   <!--home end-->
-
 
 
   <section class="about" id="events">
@@ -203,9 +200,9 @@
         </div>
       </div>
 
-      <div class="title reveal">
-        <a href="Events.html" class="btn">See More</a>
-      </div>
+        <div class="title reveal">
+            <a href="Events.html" class="btn">See More</a>
+        </div>
     </div>
   </section>
   <!--category end-->
@@ -213,17 +210,18 @@
   <!--animation-->
 
   <div class="container">
-    <svg xmlns="http://www.w3.org/2000/svg" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" id="soccer1" x="0px" y="0px" enable-background="new 0 0 2948.4 2312.3" version="1.1" viewBox="0 0 2948.4 2312.3" xml:space="preserve">
+      <svg xmlns="http://www.w3.org/2000/svg" opacity="0" id="soccer1" x="0px" y="0px"
+           enable-background="new 0 0 2948.4 2312.3" version="1.1" viewBox="0 0 2948.4 2312.3" xml:space="preserve">
       <title>soccer-1</title>
-      <g class="soccer1ball">
-        <g>
-          <polygon fill="#FFFFFF" points="2731.4,2053.3 2802.7,2098 2784.7,2026" opacity="0.4" />
-          <polygon fill="#FFFFFF" points="2764.7,2117.3 2802.7,2098 2798,2198.7" opacity="0.2" />
-          <polygon fill="#FFFFFF" points="2764.7,2117.3 2759.4,2176 2798,2198.7" opacity="0.2" />
-          <polygon fill="#FFFFFF" points="2852,2129.3 2802.7,2098 2868.7,2044.7" opacity="0.4" />
-          <polygon fill="#FFFFFF" points="2852,2129.3 2896.7,2094.7 2868.7,2044.7" opacity="0.2" />
-          <polygon fill="#FFFFFF" points="2812.7,2046 2868.7,2044.7 2878.7,2024.7" opacity="0.2" />
-          <polygon fill="#FFFFFF" points="2878.7,2024.7 2917.4,2046 2880.7,2013.3" opacity="0.2" />
+          <g class="soccer1ball">
+              <g>
+                  <polygon fill="#FFFFFF" points="2731.4,2053.3 2802.7,2098 2784.7,2026" opacity="0.4"/>
+                  <polygon fill="#FFFFFF" points="2764.7,2117.3 2802.7,2098 2798,2198.7" opacity="0.2"/>
+                  <polygon fill="#FFFFFF" points="2764.7,2117.3 2759.4,2176 2798,2198.7" opacity="0.2"/>
+                  <polygon fill="#FFFFFF" points="2852,2129.3 2802.7,2098 2868.7,2044.7" opacity="0.4"/>
+                  <polygon fill="#FFFFFF" points="2852,2129.3 2896.7,2094.7 2868.7,2044.7" opacity="0.2"/>
+                  <polygon fill="#FFFFFF" points="2812.7,2046 2868.7,2044.7 2878.7,2024.7" opacity="0.2"/>
+                  <polygon fill="#FFFFFF" points="2878.7,2024.7 2917.4,2046 2880.7,2013.3" opacity="0.2"/>
           <polygon fill="#FFFFFF" points="2920.7,2116 2939.4,2088 2917.4,2046" opacity="0.4" />
           <polygon fill="#FFFFFF" points="2888.7,2198 2923.4,2170 2920.7,2116" opacity="0.4" />
           <polygon fill="#FFFFFF" points="2892.7,2236.7 2934,2180.7 2888.7,2198" opacity="0.4" />
@@ -1422,41 +1420,41 @@
       </g>
     </svg>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
   </div>
 
   <!--about start-->
   <section class="about" id="about">
-    <div class="title reveal">
-      <h2 class="section-title">Universities Of Sri Lanka</h2>
-    </div>
-    <div class="content">
-      <div class="column col-left reveal">
-        <div class="img-card">
-          <img src="images/Sri-lanka-University-Map.webp" alt="" />
-        </div>
+      <div class="title reveal">
+          <h2 class="section-title">Universities Of Sri Lanka</h2>
       </div>
-      <div class="column col-right reveal">
-        <h2 class="content-title">All Universities of Sri Lanka</h2>
-        <p class="paragraph-text">
-          Sri Lanka is an island country in the Indian Ocean. It lies just 30
-          kilometres south-east of India. It has mountains in the
-          south-central region. Elsewhere it is mainly low lying with flat
-          coastal plains. The country has many sandy beaches and lagoons.
-          <br />
-          &nbsp;&nbsp;*Region: Asia <br />
-          &nbsp;&nbsp;*Population: 22 million (2018) <br />
-          &nbsp;&nbsp;*Area: 65,600 square kilometres <br />
-          &nbsp;&nbsp;*Capital: Colombo (executive and judicial), Sri
-          Jayewardenepura &nbsp;&nbsp;Kotte (legislative) <br />
-          &nbsp;&nbsp;*Joined Commonwealth: 1948, following independence from
-          Britain <br />
-          &nbsp;&nbsp;*Commonwealth Youth Index: 7 out of 49 countries
-        </p>
-        <a href="https://en.wikipedia.org/wiki/Sri_Lanka" class="btn">see more</a>
+      <div class="content">
+          <div class="column col-left reveal">
+              <div class="img-card">
+                  <img src="images/Sri-lanka-University-Map.webp" alt=""/>
+              </div>
+          </div>
+          <div class="column col-right reveal">
+              <h2 class="content-title">All Universities of Sri Lanka</h2>
+              <p class="paragraph-text">
+                  Sri Lanka is an island country in the Indian Ocean. It lies just 30
+                  kilometres south-east of India. It has mountains in the
+                  south-central region. Elsewhere, it is mainly low-lying with flat
+                  coastal plains. The country has many sandy beaches and lagoons.
+                  <br/>
+                  &nbsp;&nbsp;*Region: Asia <br/>
+                  &nbsp;&nbsp;*Population: 22 million (2018) <br/>
+                  &nbsp;&nbsp;*Area: 65,600 square kilometres <br/>
+                  &nbsp;&nbsp;*Capital: Colombo (executive and judicial), Sri
+                  Jayewardenepura &nbsp;&nbsp;Kotte (legislative) <br/>
+                  &nbsp;&nbsp;*Joined Commonwealth: 1948, following independence from
+                  Britain <br/>
+                  &nbsp;&nbsp;*Commonwealth Youth Index: 7 out of 49 countries
+              </p>
+              <a href="https://en.wikipedia.org/wiki/Sri_Lanka" class="btn">see more</a>
+          </div>
       </div>
-    </div>
   </section>
   <!--about end-->
 
@@ -1807,8 +1805,6 @@
   <div class="copyrightText">
     <p>Copyright 2022 Sport SriLanka . All Rights Reserved</p>
   </div>
-
-  <!--Copyfooter end-->
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 

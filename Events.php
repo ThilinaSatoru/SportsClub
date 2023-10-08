@@ -6,59 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inter Sports Club</title>
     <link rel="stylesheet" href="css/events.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!--    <link rel="stylesheet" href="css/style.css" />-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
 </head>
 
 <body>
 
 
+<?php include("_header.php"); ?>
 
 
+<!--home start-->
 
-    <?php include("_header.php"); ?>
+<section class="home" id="home">
 
+    <video class="video-slide active" src="images/production ID_4729195.mp4" autoplay muted loop></video>
 
-    <!--home start-->
+    <div class="content active ">
+        <h1>Event<br><span>Explore things</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint consequatur repellendus nisi neque dolores
+            voluptatem voluptate ratione, dicta sit? Hic consequatur eum ut voluptas cupiditate expedita explicabo
+            id dignissimos officia!</p>
 
-    <section class="home" id="home">
-
-        <video class="video-slide active" src="images/production ID_4729195.mp4" autoplay muted loop></video>
-
-        <div class="content active ">
-            <h1>Event<br><span>Explore things</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint consequatur repellendus nisi neque dolores
-                voluptatem voluptate ratione, dicta sit? Hic consequatur eum ut voluptas cupiditate expedita explicabo
-                id dignissimos officia!</p>
-
-        </div>
+    </div>
 
 
+</section>
+<!--home end-->
+<!--    <section class="about" id="events">-->
+<!--        <div class="title reveal">-->
+<!--            <h2 class="section-title">Upcoming Events</h2>-->
+<!--            <a class="btn" href="SportItems.php#request_form">Make your Request</a>-->
+<!--        </div>-->
+<!--        <br><br>-->
+<!---->
+<!--        <div class="box-contanier">-->
+<!--            <div class="swiper review-slider">-->
+<!--                <div class="swiper-wrapper">-->
+<!---->
+<!--                    --><?php //include("templates/e_cards.php") ?>
+<!---->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!---->
+<!--    </section>-->
 
-    </section>
-    <!--home end-->
+<div class="event">
+    <div class="container">
+        <p class="event-date">
+            Join with Us
+        </p>
+        <h1 class="event-title">
+            New Upcoming Events, Explore New Things
+        </h1>
+        <p class="event-info">
+            Use Augmented Reality to keep students engaged and provide detailed explanations of models and course
+            material. <br>
+            In a 3D, AR Lab, students can pinch, zoom, and rotate equipment related to the course, for a fully
+            immersive learning experience.
+        </p>
 
-
-    <div class="event">
-        <div class="container">
-            <p class="event-date">
-                Join with Us
-            </p>
-            <h1 class="event-title">
-                New Upcoming Events, Explore New Things
-            </h1>
-            <p class="event-info">
-                Use Augmented Reality to keep students engaged and provide detailed explanations of models and course
-                material. <br>
-                In a 3D, AR Lab, students can pinch, zoom, and rotate equipment related to the course, for a fully
-                immersive learning experience.
-            </p>
-
-            <form action="PHP/event.php" method="post" class="reg-form">
-                <h2 class="form-heading">
-                    Join the event
-                </h2>
+        <form action="PHP/event.php" method="post" class="reg-form">
+            <h2 class="form-heading">
+                Join the event
+            </h2>
                 <!--     first name & last name -->
                 <div class="row">
                     <!--       First name -->
@@ -162,18 +176,13 @@
         </div>
     </footer>
 
+<div class="copyrightText">
+    <p>Copyright 2022 Sport SriLanka . All Rights Reserved</p>
+</div>
 
-
-    <!--footer end-->
-
-    <!--Copyfooter start-->
-
-    <div class="copyrightText">
-        <p>Copyright 2022 Sport SriLanka . All Rights Reserved</p>
-    </div>
-
-    <!--Copyfooter end-->
-
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="js/script.js" charset="utf-8"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -25,6 +25,7 @@ function login() {
 
             // Access the 'username' column from the result.
             $username = $row['username'];
+            $_SESSION['username'] = $username;
 
             // Do something with $username.
             echo "Username: " . $username;
@@ -98,7 +99,7 @@ function register($user, $pass, $email) {
 		}
 		else{
             echo "<script>";
-            echo "alert('Register Successfull.');";
+            echo "alert('Register Successful.');";
             echo "window.location = '../login.php';";
             echo "</script>";
 		}
