@@ -29,14 +29,19 @@ function donate($fname, $lname, $phone, $email, $fund, $message) {
 	
 	if($query){
 		if (headers_sent()) {
-			die("Redirect failed. Please click on this link: <a href=...>");
+			die("Redirect failed. Please click on this link: <a href=../donationForm.php>");
 		}
 		else{
-			echo "<script> alert('Donation Successfull.') </script>";
-			exit(header('location: ../donationForm.php'));
+            echo "<script>";
+            echo "alert('Donation Successfull.');";
+            echo "window.location = '../donationForm.php';"; // redirect with javascript, after page loads
+            echo "</script>";
 		}
 	} else {
-		echo "<script> alert('Donation Failed.') </script>";
+        echo "<script>";
+        echo "alert('Donation Failed.');";
+        echo "window.location = '../donationForm.php';"; // redirect with javascript, after page loads
+        echo "</script>";
 	}
 	mysqli_close($con);	
 }

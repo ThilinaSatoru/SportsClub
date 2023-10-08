@@ -25,19 +25,18 @@ function donate($fname, $lname, $email, $title, $type, $description) {
 
 	$query = "INSERT INTO event (fname, lname, email, title, type, description) VALUES('$fname', '$lname', '$email', '$title', '$type', '$description')";
 	mysqli_query($con, $query);
-	
-	if($query){
-		if (headers_sent()) {
-			echo "<script> alert('Something Went Wrong!') </script>";
-			die("Redirect failed. Please click on this link: <a href=...>");
-		}
-		else{
-			echo "<script> alert('Event Added Successfully.') </script>";
-			exit(header('location: ../Events.php'));
-		}
-	}
+
+    echo "<script>";
+    if (headers_sent()) {
+        echo "alert('Something Went Wrong!');";
+        echo "</script>";
+        die("Redirect failed. Please click on this link: <a href=../Events.php>");
+    }
+    else{
+        echo "alert('Event Added Successfully.');";
+        echo "window.location = '../Events.php';"; // redirect with javascript, after page loads
+        echo "</script>";
+    }
+
 	mysqli_close($con);	
 }
-
-
-?>

@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 include("connection.php");
 include("functions.php");
 
@@ -16,19 +17,33 @@ function login() {
 	$query = "SELECT * FROM user WHERE username='$user' AND password='$pass' LIMIT 1";
 	$results = mysqli_query($con, $query);
 
-	if (mysqli_num_rows($results) == 1) { 
-		// user found
-		$logged_in_user = mysqli_fetch_assoc($results);
-		// $_SESSION['user'] = $logged_in_user;
-		// $_SESSION['success']  = "User logged in";
-		echo "<script> alert('Welcome " . $logged_in_user . "') </script>";
-		header("location: ../index.php");
-		
-	} else {
-		echo "<script> alert('Wrong username/password combination.') </script>";
-		array_push($errors, "Wrong username/password combination");
-		header("location: ../login.php");
-	}
+    if ($results) {
+        // Check if any rows were returned.
+        if (mysqli_num_rows($results) > 0) {
+            // Fetch the first row as an associative array.
+            $row = mysqli_fetch_assoc($results);
+
+            // Access the 'username' column from the result.
+            $username = $row['username'];
+
+            // Do something with $username.
+            echo "Username: " . $username;
+            echo "<script>";
+            echo "alert('Welcome " . $username . "');";
+            echo "window.location = '../index.php';"; // redirect with javascript, after page loads
+            echo "</script>";
+        } else {
+            // No matching user found.
+            echo "User not found.";
+            echo "<script>";
+            echo "alert('Wrong username/password combination.');";
+            echo "window.location = '../login.php';"; // redirect with javascript, after page loads
+            echo "</script>";
+        }
+    } else {
+        // Query execution failed.
+        echo "Query failed: " . mysqli_error($con);
+    }
 	mysqli_close($con);	
 }
 
@@ -52,11 +67,17 @@ if (isset($_POST['register'])) {
 
 			if (mysqli_num_rows($res_u) > 0) {
 				$name_error = "User ID already taken";
-				echo "<script> alert('" . $name_error . "') </script>";
+                echo "<script>";
+                echo "alert('" . $name_error . "');";
+                echo "window.location = '../login.php';";
+                echo "</script>";
 			}
-			else if(mysqli_num_rows($res_e) > 0) {
+			if(mysqli_num_rows($res_e) > 0) {
 				$email_error = "Account exists with this Email";
-				echo "<script> alert('" . $name_error . "') </script>";
+                echo "<script>";
+                echo "alert('" . $email_error . "');";
+                echo "window.location = '../login.php';";
+                echo "</script>";
 			}
 			else{
 				register($username, $password1, $email);
@@ -73,11 +94,13 @@ function register($user, $pass, $email) {
 	
 	if($query){
 		if (headers_sent()) {
-			die("Redirect failed. Please click on this link: <a href=...>");
+			die("Redirect failed. Please click on this link: <a href=../login.php>");
 		}
 		else{
-			echo "<script> alert('Register Successfull.') </script>";
-			exit(header('location: ../login.php'));
+            echo "<script>";
+            echo "alert('Register Successfull.');";
+            echo "window.location = '../login.php';";
+            echo "</script>";
 		}
 	}
 	mysqli_close($con);	

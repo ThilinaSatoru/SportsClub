@@ -17,14 +17,19 @@ function SaveContact() {
 	
 	if($query) {
 		if (headers_sent()) {
-			die("Redirect failed. Please click on this link: <a href=...>");
+			die("Redirect failed. Please click on this link: <a href=../index.php>");
 		}
 		else{
-			echo "<script> alert('Message Sent.') </script>";
-			exit(header('location: ../index.php'));
+            echo "<script>";
+            echo "alert('Message Sent.');";
+            echo "window.location = '../index.php';"; // redirect with javascript, after page loads
+            echo "</script>";
 		}
 	} else {
-		echo "<script> alert('Message Failed .') </script>";
+        echo "<script>";
+        echo "alert('Message Failed.');";
+        echo "window.location = '../index.php';"; // redirect with javascript, after page loads
+        echo "</script>";
 	}
 	mysqli_close($con);	
 }

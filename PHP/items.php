@@ -37,11 +37,16 @@ function request($name, $email, $university, $batch, $equipment, $description, $
                 VALUES('$name', '$email', '$university', '$batch', $e_id, '$description', '$combinedDT')";
 
             if(!mysqli_query($con, $query)) {
-                echo("Error description: " . $con -> error);
-                echo "<script> alert('Register Failed.') </script>";
+//                echo("Error description: " . $con -> error);
+                echo "<script>";
+                echo "alert('Register Failed.');";
+                echo "window.location = '../SportItems.php';"; // redirect with javascript, after page loads
+                echo "</script>";
             } else {
-                echo "<script> alert('Request Successfull.') </script>";
-                exit(header('location: ../SportItems.php'));
+                echo "<script>";
+                echo "alert('Request Successfull.');";
+                echo "window.location = '../SportItems.php';"; // redirect with javascript, after page loads
+                echo "</script>";
             }
         }
     }
