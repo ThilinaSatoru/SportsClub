@@ -80,25 +80,25 @@
       <div class="nav-btn active"></div>
       <div class="nav-btn"></div>
       <div class="nav-btn"></div>
-      <div class="nav-btn"></div>
-      <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
     </div>
   </section>
   <!--home end-->
 
 
   <section class="about" id="events">
-    <div class="title reveal">
-      <h2 class="section-title">Upcoming Events</h2>
-      <a class="btn" href="SportItems.php#request_form">Make your Request</a>
-    </div>
-    <br><br>
+      <div class="title reveal">
+          <h2 class="section-title">Upcoming Events</h2>
+          <a class="btn" href="Events.php#event-form">Make your Request</a>
+      </div>
+      <br><br>
 
-    <div class="box-contanier">
-      <div class="swiper review-slider">
-        <div class="swiper-wrapper">
+      <div class="box-contanier">
+          <div class="swiper review-slider">
+              <div class="swiper-wrapper">
 
-          <?php include("templates/e_cards.php") ?>
+                  <?php include("templates/e_cards.php") ?>
 
         </div>
       </div>

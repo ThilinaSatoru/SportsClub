@@ -22,7 +22,8 @@ mysqli_report(MYSQLI_REPORT_STRICT);
 
     } catch (Exception $e) {
         // Handle the exception
-        echo "Failed to connect to MySQL : : " . $e->getMessage();
+        echo "<h1 style='text-align: center; padding: 3em;'>MySQL CONNECTION FAILED</h1>";
+        echo "<h2 style='text-align: center; text-decoration: underline; color: #f43648'>" . $e->getMessage() . "</h2>";
         echo "<script>";
         echo "alert('Connection Failed: " . $e->getMessage() . "');";
         echo "</script>";

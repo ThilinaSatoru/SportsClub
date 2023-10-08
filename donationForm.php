@@ -31,11 +31,11 @@
     <!--home end-->
 
     <!--donation-->
-    <form method="post" action="PHP/donation.php">
+    <form method="post" action="PHP/donation.php" id="donation-form">
         <div id="container">
 
             <span class="input">
-                <input type="text" class="input__field" id="input-1" name="fname" required />
+                <input type="text" class="input__field" id="input-1" name="fname" required/>
                 <label for="input-1" class="input__label">
                     <span class="input__label-content">First Name</span>
                 </label>

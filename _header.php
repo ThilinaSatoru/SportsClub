@@ -25,7 +25,7 @@ if (isset($_POST['logout'])) {
             /// your code here
             echo
                 "
-                <a class='dropdown-item' style='font-size: larger'>" . strtoupper($_SESSION['username']) . "</a>
+                <a class='dropdown-item' style='font-size: larger; color: darkblue'>" . strtoupper($_SESSION['username']) . "</a>
                 <form method='POST'>
                   <a class='dropdown-item'><input type='submit' value='Logout' name='logout'/></a>
                 </form>
@@ -33,7 +33,7 @@ if (isset($_POST['logout'])) {
         } else {
             echo
             "
-           <a href='login.php'>Login</a>
+           <a href='login.php' style='color: darkblue'>Login</a>
           ";
         }
         ?>

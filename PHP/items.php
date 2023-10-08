@@ -21,7 +21,7 @@ if (isset($_POST['request'])) {
 }
 
 
-function validate($name, $email, $university, $batch, $equipment, $description, $combinedDT)
+function validate_items($name, $email, $university, $batch, $equipment, $description, $combinedDT)
 {
 
     if (!preg_match('/^[A-Z]{6}\d{3}[A-Z]$/', $batch)) {
@@ -50,7 +50,7 @@ function request($name, $email, $university, $batch, $equipment, $description, $
     global $con;
     global $errors;
 
-    if (validate($name, $email, $university, $batch, $equipment, $description, $combinedDT)) {
+    if (validate_items($name, $email, $university, $batch, $equipment, $description, $combinedDT)) {
         $equip = "SELECT * FROM equipment WHERE name = '$equipment' LIMIT 1";
         $q_id = $con->query($equip);
 

@@ -69,17 +69,17 @@
             immersive learning experience.
         </p>
 
-        <form action="PHP/event.php" method="post" class="reg-form">
+        <form action="PHP/event.php" method="post" class="reg-form" id="event-form">
             <h2 class="form-heading">
                 Join the event
             </h2>
-                <!--     first name & last name -->
-                <div class="row">
-                    <!--       First name -->
-                    <div class="col">
-                        <label for="">
-                            First name
-                        </label>
+            <!--     first name & last name -->
+            <div class="row">
+                <!--       First name -->
+                <div class="col">
+                    <label for="">
+                        First name
+                    </label>
                         <input type="text" name="fname" placeholder="Enter your first name" required>
                     </div>
                     <!--       Last name -->
